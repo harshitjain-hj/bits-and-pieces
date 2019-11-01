@@ -77,11 +77,11 @@
                     </div>
                      <!-- Least Used Words-->
                      <div class="card my-4">
-                            <h5 class="card-header">Most Used Words</h5>
+                            <h5 class="card-header">Least Used Words</h5>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <ul class="list-unstyled mb-0" id="mostUsed">
+                                        <ul class="list-unstyled mb-0" id="leastUsed">
                                             
                                         </ul>
                                     </div>
@@ -90,12 +90,14 @@
                     </div>
                     <!-- Document Stats-->
                     <div class="card my-4">
-                            <h5 class="card-header">Most Used Words</h5>
+                            <h5 class="card-header">Document Stats</h5>
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <ul class="list-unstyled mb-0" id="mostUsed">
-                                            
+                                        <ul class="list-unstyled mb-0">
+                                            <li id="docLength"></li>
+                                            <li id="wordCount"></li>
+                                            <li id="charCount"></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -106,6 +108,12 @@
         </div>
 
         <!-- JavaScript -->
+        <!-- text/template so that browser ignore the script tag bcz of unknown type -->
+        <script id="template-ul-items" type="text/template">
+            <li>
+                {{val}}
+            </li>
+        </script>
          <script src="script.js"></script>
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
