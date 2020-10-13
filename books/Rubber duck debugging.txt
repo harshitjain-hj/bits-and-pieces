@@ -1,0 +1,11 @@
+Rubber duck debugging
+
+What is Rubber duck debugging?
+In software engineering, rubber duck debugging is a method of debugging code. The name is a reference to a story in the book The Pragmatic Programmer in which a programmer would carry around a rubber duck and debug their code by forcing themselves to explain it, line-by-line, to the duck. Many other terms exist for this technique, often involving different (usually) inanimate objects, or pets such as a dog or a cat.
+
+Many programmers have had the experience of explaining a problem to someone else, possibly even to someone who knows nothing about programming, and then hitting upon the solution in the process of explaining the problem. In describing what the code is supposed to do and observing what it actually does, any incongruity between these two becomes apparent. More generally, teaching a subject forces its evaluation from different perspectives and can provide a deeper understanding. By using an inanimate object, the programmer can try to accomplish this without having to interrupt anyone else.
+
+How it all started?
+On 1 April 2018, Stack Exchange introduced a rubber duck avatar on their websites as a new feature called Quack Overflow. The duck appeared at the bottom right corner of the browser viewport, and attempted to help the visitor by listening to their problem and responding with a solution. However, the duck merely produced a quack sound after apparently thinking and typing. It referenced rubber ducking as a powerful method for solving problems. Some confused visitors seeing the duck for the first time thought that a malware program had been installed in their computer before realizing it was an April Fools' Day joke.
+
+Reference - https://en.wikipedia.org/wiki/Rubber_duck_debugging

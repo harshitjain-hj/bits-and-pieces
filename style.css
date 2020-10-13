@@ -1,27 +1,199 @@
 body {
-    background: #f12711;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #f5af19, #f12711);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #f5af19, #f12711); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  background: url(./assets/background/hero.jpg);
+  background-size: cover;
+}
+body:after {
+  animation: grain 2s steps(10) infinite;
+  background-image: url(./assets/background/grains.png);
+  content: "";
+  height: 300%;
+  left: -50%;
+  opacity: 0.8;
+  position: fixed;
+  top: -110%;
+  width: 300%;
+  z-index: -1;
 }
 
-.responsive{
-    max-width: 50%;
-    height: auto;
+@keyframes grain {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(-7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+    filter: saturate(2);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+    /* filter: saturate(80); */
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
 }
 
-img {
-    padding: 15px;
+.responsive {
+  max-width: 50%;
+  height: auto;
 }
 
 .displayBox {
-    width: 100%;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: grey;
+
 }
 
-.scroll-box{
-    overflow-y: auto;
-    height: 500px;
-    float: left;
-    padding: 1rem;
+.scroll-box {
+  overflow-y: auto;
+  height: 73vh;
+  float: left;
+  padding: 20px 10px 20px 20px;
+}
+
+h3 {
+  color: #e3e3e3 !important;
+  margin: 20px 0 20px 20px !important;
+}
+
+h5 {
+  color: #fff !important;
+  margin: 10px 0 10px 10px !important;
+}
+
+h5:before {
+  position: absolute;
+  content: "";
+  top: 12px;
+  left: -2px;
+  width: 3px;
+  height: 22px;
+  display: block;
+  background: #fff;
+}
+
+.card {
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.card-body {
+  padding: 0px !important;
+}
+
+li, p {
+  color: grey;
+  margin-bottom:  2px !important;
+  padding: 1px 0 1px 10px;
+}
+
+a {
+  font-weight: bolder;
+  color: lightgrey !important;
+  font-size: 16px;
+  /* text-transform: capitalize; */
+  letter-spacing: 2px;
+  margin-bottom:  5px !important;
+}
+
+a:hover {
+  text-decoration: none !important;
+  color: red !important;
+}
+
+label {
+  /* width: 100%; */
+  padding: 12px 0 12px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: grey; 
+  text-align: center;
+  margin: 10px !important;
+}
+
+input[type="text"] {
+  padding: 12px 0 12px 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: grey; 
+  text-align: center;
+  margin-bottom: 0px !important;
+  background: none;
+  min-width: 160px;
+}
+input[type="submit"] {
+  padding: 12px 20 12px 20;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  color: grey; 
+  text-align: center;
+  margin-bottom: 0px !important;
+  background: none;
+}
+
+input[type="submit"]:active, input[type="submit"]:focus {
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: yellow;
+}
+
+label:hover {
+  transform: scale(1.05);
+}
+
+label span {
+  font-weight: normal;
+  color: yellow;
+}
+
+input[type="text"] {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  outline: none;
+  color: yellow;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey; 
+  border-radius: 10px;
+  border: 8px solid #060609;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e3e3e3; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: greenyellow; 
 }

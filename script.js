@@ -161,3 +161,40 @@ function performMark() {
         element.scrollIntoView();
     };
 }
+
+// const search = document.querySelector('input[type="text"]')
+// search.addEventListener("keyup", console.log("Dfsd"))
+
+
+const input = document.querySelector('input[type="file"]')
+input.addEventListener('change', function(e) {
+    
+    let show = "<span>Viewing : </span>" + input.files[0].name.split('.')[0];
+
+    let output = document.getElementById("selector");
+    output.innerHTML = show;
+    output.classList.add("active");
+
+    const reader = new FileReader();
+    reader.onload = () => {
+
+        
+        //reset our UI
+        document.getElementById("fileName").innerHTML = input.files[0].name.split('.')[0];
+        document.getElementById("searchstat").innerHTML = "";
+        document.getElementById("keyword").value = "";
+
+        currentBook = reader.result;
+        getDocStats(currentBook);
+
+        currentBook = currentBook.replace(/(?:\r\n|\r|\n)/g, '<br>');
+
+        document.getElementById("fileContent").innerHTML = currentBook;
+
+        var elmnt = document.getElementById("fileContent");
+        elmnt.scrollTop = 0;
+
+
+    }
+    reader.readAsText(input.files[0])
+}, false)

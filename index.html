@@ -1,125 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>WordSeeker - Know some more insights about your book</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <!-- Style -->
-        <link rel="stylesheet" href="style.css">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
-    <body>
-        
-        <div class="container">
-            <div class="row">
-                <!-- Main Content Area -->
-                <div class="col-md-8">
-                    <!-- <img src="seeker.png" class="responsive"> -->
-                    <div class="card my-5">
-                        <h2 class="card-header" id="fileName">Book Title</h2>
-                        <div class="card-body">
-                            <div class="displayBox scroll-box" id="fileContent">
-                                Select a book on the right.
-                                
-                            </div>
-                        </div>
-                        <div class="card-footer text-muted">
-                            <a href="https://github.com/edoc99" target="_blank">Check out my other projects as well.</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Side Bar -->
-                <div class="col-md-4">
-                    <!-- Search Widget -->
-                    <div class="card mt-5">
-                        <h5 class="card-header">Search</h5>  
-                        <div class="card-body">
-                            <div class="input-group">
-                                <input type="text" class="form-control" id="keyword" placeholder="Search for...">
-                                <span class="input-group-btn">
-                                    <button class="btn btn-secondary" type="button" onclick="performMark()">Search</button>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="card-footer" id="searchstat">
+  <head>
+    <title>Bits and pieces</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
-                        </div> 
-                    </div>
-                    <!-- Select a Book Widget -->
-                    <div class="card my-3"> 
-                        <h5 class="card-header">Select a Book</h5>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <ul class="list-unstyled mb-0">
-                                        <li><a href="#" onclick="loadBook('JekyllAndHyde.txt','Jekyll And Hyde ')">Jekyll And Hyde</a></li>
-                                        <li><a href="#" onclick="loadBook('AliceInWonderland.txt','Alice in wonderland')">Alice in wonderland</a></li>
-                                        <li><a href="#" onclick="loadBook('LOTR.txt','Lord of the Rings')">Lord of the Rings</a></li>
-                                        <li><a href="#" onclick="loadBook('Resume.txt','Harshit Resume')">Harshit's Resume</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Most Used Words-->
-                    <div class="card my-3">
-                        <h5 class="card-header">Most Used Words</h5>
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <ul class="list-unstyled mb-0" id="mostUsed">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="/assets/favicon.ico">
 
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                     <!-- Least Used Words-->
-                     <div class="card my-3">
-                            <h5 class="card-header">Least Used Words</h5>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul class="list-unstyled mb-0" id="leastUsed">
-                                            
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                    <!-- Document Stats-->
-                    <div class="card my-3">
-                            <h5 class="card-header">Document Stats</h5>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul class="list-unstyled mb-0">
-                                            <li id="docLength"></li>
-                                            <li id="wordCount"></li>
-                                            <li id="charCount"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                 </div>
+    <!-- for IE -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" >
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Main Content Area -->
+        <div class="col-md-8">
+          <div class="card bg-transparent rounded-0 my-md-5 mt-3">
+            <h3 id="fileName">Book Title</h3>
+            <div class="card-body p-0">
+              <div class="displayBox scroll-box" id="fileContent">
+                Select a book on the right.
+              </div>
             </div>
+            <div class="card-footer text-muted">
+              <a href="https://github.com/harshitjain-hj" target="_blank"
+                >If you ❤️ it, do leave a ⭐.</a
+              >
+            </div>
+          </div>
         </div>
+        <!-- Side Bar -->
+        <div class="col-md-4 align-self-center">
+          <!-- Select a Book Widget -->
+          <div class="card bg-transparent rounded-0 my-3">
+            <h5 class="">Select a Book or Upload ( .txt file )</h5>
+         
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a
+                      href="#"
+                      onclick="loadBook('Lorem Ipsum.txt','Lorem Ipsum')"
+                      >Lorem Ipsum</a>
+                    </li>
+                  </ul>
+                    <input id="file" type="file" name="" hidden/>
+                    <label for="file" id="selector">View file</label>
+          </div>
+          <!-- Search Widget -->
+            <div class="d-flex">
+                <input
+                  type="text"
+                  id="keyword"
+                  class="flex-grow-1"
+                  placeholder="look for ..."
+                  onchange="performMark()"
+                />
+                <input
+                  type="submit"
+                  onclick="performMark()"
+                  value="check"
+                />
+            </div>
+            <p id="searchstat"></p>
+          <!-- Most Used Words-->
+          <div class="card bg-transparent rounded-0 my-3">
+            <h5 class="">Most Used Words</h5>
+                  <ul class="list-unstyled mb-0 text-capitalize" id="mostUsed"></ul>
+          </div>
+          <!-- Least Used Words-->
+          <div class="card bg-transparent rounded-0 my-3">
+            <h5 class="">Least Used Words</h5>
 
-        <!-- JavaScript -->
-        <!-- text/template so that browser ignore the script tag bcz of unknown type -->
-        <script id="template-ul-items" type="text/template">
-            <li>
-                {{val}}
-            </li>
-        </script>
-         <script src="script.js"></script>
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    </body>
+              <ul class="list-unstyled mb-0 text-capitalize" id="leastUsed"></ul>
+                
+          </div>
+          <!-- Document Stats-->
+          <div class="card bg-transparent rounded-0 my-3">
+            <h5 class="">Document Stats</h5>
+              
+              <ul class="list-unstyled mb-0 text-capitalize">
+                <li id="docLength"></li>
+                <li id="wordCount"></li>
+                <li id="charCount"></li>
+              </ul>
+                
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <!-- text/template so that browser ignore the script tag bcz of unknown type -->
+    <script id="template-ul-items" type="text/template">
+      <li>
+          {{val}}
+      </li>
+    </script>
+    <script src="script.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
